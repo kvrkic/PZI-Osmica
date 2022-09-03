@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description"
+    content="Blue Airways putnička agencija za organizaciju i provođenje putovanja po cijelom svijetu uključujući brojne top destinacije" />
+  <meta name="keywords" content="Blue Airways, putovanje, karta, Split" />
+  <meta name="author" content="Fabjan Kaliterna" />
+  <title>PZI - Seminar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
+
+  <script defer src="./js/script.js"></script>
+
+
+  <style>
+    body {
+      background-image: url("paper.gif");
+      background-color: #dcd9e4;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Header/Zaglavlje: Logo, glavni naslov i navigacija-->
+  <header>
+    <div class="container grid-wrapper">
+      <h2>Blue Airways</h2>
+      <div id="shopping">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="shopping-count"></span>
+      </div>
+      <nav>
+        <a class="link" href="#">Početna</a>
+        <a class="link" href="#karte">Karte</a>
+        <a class="link" href="#cjenik">Cjenik</a>
+        <a class="link" href="#galerija">Galerija</a>
+        <a class="link" href="#recenzije">Recenzije</a>
+      </nav>
+    </div>
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Shopping Side Menu -->
+    <section id="shopping-side-menu">
+      <div id="shopping-items"></div>
+      <div id="total-price">
+        <span>Ukupna cijena:</span>
+        <strong>0.00 kn</strong>
+      </div>
+    </section>
+
+    <!-- Velika naslovna slika (banner) s tekstom -->
+    <section id="banner">
+      <div class="container">
+        <img src="./images/let1.jpg" alt="Flight banner" />
+        <div class="text">
+          <h2>
+            Uz Blue Airways, najbolja ponuda avionskih letova! <br>
+            Nemoj mi reći koliko si obrazovan, reci mi koliko si putovao.
+            - Muhamed
+          </h2>
+          <span> </span>
+          <button class="orange">Rezerviraj odmah</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="karte">
+      <h2>Odaberi jednu iz posebnog izbora destinacija</h2>
+      <div class="container">
+
+        <article class="karte-card">
+          <img src="./images/putovanja/bali1.jpg" alt="Let Bali" />
+          <h3>Bali</h3>
+          <p>
+            Želite uživati u predivnim tropskim plažama, ali u isto vrijeme nešto i vidjeti, obići, doživjeti, naučiti?
+            To znači da je Bali idealna destinacija za vas…
+            Bali je prije svega uživanje u suncu i moru te predivnim plažama ovog jedinstvenog otoka,
+            ali ne samo to, Bali je i mnoštvo zelenih rižinih polja, smaragdno more, koraljni grebeni, prašume,
+            valovite ravnice, močvare mangrove, aktivni vulkani...
+            i najvažnije Bali je veliko kulturološko i duhovno središte s mnoštvom atraktivnih i dobro očuvanih hramova
+            i spomenika.
+          </p>
+          <small>Već od: <em>1700,00 kn</em></small>
+          <button class="blue">Rezerviraj</button>
+        </article>
+
+        <article class="karte-card">
+          <img src="./images/putovanja/barcelona1.jpg" alt="Let Barcelona" />
+          <h3>Barcelona</h3>
+          <p>
+            Kulture se tope zajedno u Barceloni, živoj metropoli očaravajuće arhitekture,
+            srednjovjekovnih ulica i vrhunskih muzeja na obali Katalonije. Njegov najslavniji lik,
+            Antoni Gaudí, zaslužan je za najistaknutije gradske spomenike. Od iskrivljene fasade kameno
+            klesane Casa Milà do monumentalne Sagrada Familia, djela ovog svjetski poznatog arhitekta mogu
+            se pronaći po cijelom gradu.
+          </p>
+          <small>Već od: <em>500,00 kn</em></small>
+          <button class="blue">Rezerviraj</button>
+        </article>
+
+        <article class="karte-card">
+          <img src="./images/putovanja/dubai1.jpg" alt="Let Dubai" />
+          <h3>Dubai</h3>
+          <p>
+            Kosmopolitski i arhitektonski zapanjujući Dubai doista je globalni grad. Sa svojim ultramodernim neboderima,
+            umjetnim arhipelagom Palmovih otoka i najvećim svjetskim trgovačkim centrom, Dubai nudi nešto za svaki ukus.
+            Okružen pustinjom, ovaj grad je futuristički dragulj Bliskog istoka i Ujedinjenih Arapskih Emirata.
+            Uz elegantne jahte kod kuće u luksuznoj gradskoj marini i jezero Burj Khalifa od 30 hektara i njegovu
+            fontanu Dubai,
+            najveću svjetsku plesnu fontanu, posjetitelji bi na trenutak mogli zaboraviti da su u pustinji.
+          </p>
+          <small>Već od: <em>1950,00 kn</em></small>
+          <button class="blue">Rezerviraj</button>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="karte-card-posebna">
+          <img src="./images/putovanja/london1.jpg" alt="Let London" />
+          <h3>London</h3>
+          <h4>*ekskluzivna ponuda*</h4>
+          <p>
+            „Kad se čovjek zasiti Londona, zasitio se i samog života, jer u Londonu je sve što život može priuštiti!",
+            riječi su Samuela Johnsona, engleskog pisca, s kojima se u potpunosti slažemo. Nama nije nikad dosta
+            Londona, zato mu se često vraćamo! Imat ćete priliku vidjeti London iz ptičje perspektive na poznatom kotaču
+            London Eye, posjetiti brojne muzeje kao što je British museum,
+            Nacionalna galerija i Galerija portreta na Trafalgar trgu ili neke od čuvenih muzeja u četvrti South
+            Kensington. U Londonskom Cityju – vidjet ćemo katedralu sv. Pavla , Millenium most, Tower bridge i Tower of
+            London. U slobodno vrijeme vas pozivamo da otkrijete Notting Hill, prošećete do Portobello roada ili Camden
+            Towna i probate odličan street food iz cijelog svijeta!
+          </p>
+          <small>Posebna ponuda već od: <em>460,00 kn</em><br></small>
+          <small>Ponuda traje još samo:<small id="timer"></small>
+            <script>
+              var countDownDate = new Date("Sep 20, 2021 12:00:00").getTime();
+              var x = setInterval(function () {
+                var now = new Date().getTime();
+                var distance = countDownDate - now;
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+                  + minutes + "m " + seconds + "s ";
+                if (distance < 0) {
+                  clearInterval(x);
+                  document.getElementById("timer").innerHTML = "EXPIRED";
+                }
+              }, 1000);
+            </script>
+          </small>
+          <button class="blue">Rezerviraj</button>
+        </article>
+      </div>
+
+      <div class="container">
+        <article class="karte-card">
+          <img src="./images/putovanja/moskva1.jpg" alt="Let Moskva" />
+          <h3>Moscow</h3>
+          <p>
+            Prestižni glavni grad Rusije drži se na svjetskoj sceni,
+            sa zadivljujućom arhitekturom, muzejima i raznolikom kulturnom ponudom što ga
+            čini primamljivim mjestom za posjetiti u bilo koje doba godine.
+            Stupite nogom na crnu kaldrmu kultnog moskovskog Crvenog trga i počastit ćete se
+            panoramom od koje zastaje dah kojom dominiraju veliki zidovi Kremlja od opeke i katedrala
+            sv. Vasilija. Ovo je povijesno srce grada, gdje se održavaju mnogi festivali i proslave.
+            Tamo ćete pronaći i Lenjinov mauzolej, kao i Spomenik Mininu i Požarskom.
+          </p>
+          <small>Već od: <em>750,00 kn</em></small>
+          <button class="blue">Rezerviraj</button>
+        </article>
+
+        <article class="karte-card">
+          <img src="./images/putovanja/newyork1.jpg" alt="Let Newyork" />
+          <h3>New York</h3>
+          <p>
+            Nevjerojatni New York City pun je kultnih arhitektonskih znamenitosti,
+            kulturnih mjesta i zadivljujućih pogleda. Pa zašto ne biste istražili Big Apple do srži uz Broadway show,
+            igru ​​na stadionu Yankee ili vožnju trajektom do Kipa slobode?
+            Želite li vidjeti elegantni Manhattan, kulturno raznolik Brooklyn ili rodno mjesto rapa i hip hopa u
+            Bronxu,
+            možete računati na pouzdanu gradsku podzemnu željeznicu ili ikonične žute taksije koje će vas tamo odvesti
+            u
+            trenu.
+            Ne zaboravite posjetiti vrh zgrade Empire State i diviti se velikoj panorami grada i kultnom obzorju.
+            Njujorški prometni Times Square najposjećenija je svjetska turistička atrakcija i nikada ne uspijeva
+            opčiniti svojim impresivnim neonskim svjetlima.
+          </p>
+          <small>Već od: <em>3000,00 kn</em></small>
+          <button class="blue">Rezerviraj</button>
+        </article>
+
+        <article class="karte-card">
+          <img src="./images/putovanja/pariz1.jpg" alt="Let Pariz" />
+          <h3>Paris</h3>
+          <p>
+            Simbol ljubavi i najposjećeniji grad na svijetu, prekrasan Pariz zaista ima sve!
+            Romantični kafići Montparnasse, živahni bistroi Latinske četvrti i luksuzne luksuzne trgovine
+            Champs-Élysées
+            samo
+            čekaju da budu otkriveni.
+            Divite se pogledima s kultnog Eiffelovog tornja, zabavite se u Disneylandu ili
+            uživajte u umjetničkoj atmosferi Montmartra. Posjetite Louvre kako biste se pokušali
+            rukovati s Miloskom Venerom i riješiti misterij iza osmijeha Mona Lise.
+          </p>
+          <small>Već od: <em>560,00 kn</em></small>
+          <button class="blue">Rezerviraj</button>
+      </div>
+    </section>
+
+    <!-- Tablica cjenika -->
+    <section id="cjenik">
+      <h2>Cjenik</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Destinacija</th>
+            <th>Klasa</th>
+            <th>Cijena</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bali</td>
+            <td>Economy</td>
+            <td>1700,00 kn</td>
+            <td></td>
+            <td></td>
+            <td>First class</td>
+            <td>2500,00 kn</td>
+          </tr>
+          <tr>
+            <td>Barcelona</td>
+            <td>Economy</td>
+            <td>500,00 kn</td>
+            <td></td>
+            <td></td>
+            <td>First class</td>
+            <td>1200,00 kn</td>
+          </tr>
+          <tr>
+            <td>Dubai</td>
+            <td>Economy</td>
+            <td>1950,00 kn</td>
+            <td></td>
+            <td></td>
+            <td>First class</td>
+            <td>2650,00 kn</td>
+          </tr>
+          <tr>
+            <td>Moscow</td>
+            <td>Economy</td>
+            <td>750,00 kn</td>
+            <td></td>
+            <td></td>
+            <td>First class</td>
+            <td>1200,00 kn</td>
+          </tr>
+          <tr>
+            <td>New York</td>
+            <td>Economy</td>
+            <td>3000,00 kn</td>
+            <td></td>
+            <td></td>
+            <td>First class</td>
+            <td>5600,00 kn</td>
+          </tr>
+          <tr>
+            <td>Paris</td>
+            <td>Economy</td>
+            <td>560,00 kn</td>
+            <td></td>
+            <td></td>
+            <td>First class</td>
+            <td>1250,00 kn</td>
+          </tr>
+          <tr>
+            <td>London</td>
+            <td>Economy</td>
+            <td>460,00 kn</td>
+            <td></td>
+            <td></td>
+            <td>First class</td>
+            <td>1050,00 kn</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="galerija">
+      <h2>
+        Galerija</h2>
+      <!-- Container for the image gallery -->
+      <div class="container">
+
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="./images/putovanja/bali1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="./images/putovanja/barcelona1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="./images/putovanja/dubai1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="./images/putovanja/moskva1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="./images/putovanja/newyork1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="./images/putovanja/pariz1.jpg" style="width:100%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        <!-- Image text -->
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="./images/putovanja/bali1.jpg" style="width:100%" onclick="currentSlide(1)"
+              alt="Bali">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/putovanja/barcelona1.jpg" style="width:100%"
+              onclick="currentSlide(2)" alt="Barcelona">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/putovanja/dubai1.jpg" style="width:100%" onclick="currentSlide(3)"
+              alt="Dubai">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/putovanja/moskva1.jpg" style="width:100%" onclick="currentSlide(4)"
+              alt="Moskva">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/putovanja/newyork1.jpg" style="width:100%" onclick="currentSlide(5)"
+              alt="New york">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="./images/putovanja/pariz1.jpg" style="width:100%" onclick="currentSlide(6)"
+              alt="Pariz">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Recenzije -->
+    <section id="recenzije">
+      <h2>Feedback</h2>
+      <div class="feedback">
+        <p>Dragi klijentu,<br>
+          Hvala ti što si koristio upravo našu agenciju za tvoje putovanje. Tvoje mišljenje nam je veoma važno. Kako bi
+          naša putovanja i usluge bile još bolje, molimo te da izdvojiš minutu svog vremena te ostaviš svoje mišljenje.
+        </p>
+        <form method="post" action="#action-url" style="text-align: center;">
+          <div class="clear"></div>
+          <hr class="survey-hr">
+          <div style="color:grey">
+            <span style="float:left">
+              UŽASNO
+            </span>
+            <span style="float:right">
+              ODLIČNO
+            </span>
+          </div>
+          <span class="scale-rating">
+            <label value="1">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="2">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="3">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="4">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="5">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="6">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="7">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="8">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="9">
+              <input type="radio" name="rating">
+              <label style="width:100%;"></label>
+            </label>
+            <label value="10">
+              <input type="radio" name="rating" value="10">
+              <label style="width:100%;"></label>
+            </label>
+          </span>
+
+          <div class="clear"></div>
+          <hr class="survey-hr">
+          <label for="m_3189847521540640526commentText">Dodatne pohvale ili kritike:</label>
+          <textarea cols="75" name="commentText" rows="3"></textarea><br>
+          <br>
+          <div class="clear"></div>
+          <input style="background:#43a7d5;color:#fff;padding:12px;border:0" type="submit" value="Predaj">
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3>Blue Airways</h3>
+
+      <form action="action_page.php">
+        <div class="container">
+          <h4>Newsletter</h4>
+          <input type="text" placeholder="Email" name="mail" required>
+        </div>
+
+        <div class="container">
+          <input type="submit" value="Subscribe">
+        </div>
+      </form>
+
+    </div>
+
+    <div class="footer-center">
+
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p>Šoltanska 28 <br> Split 21000, Hrvatska</p>
+      </div>
+
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+021 543 667 <br> +385 252 6067</p>
+      </div>
+
+      <div>
+        <i class="fa fa-envelope"></i>
+        <p><a href="mailto:support@company.com">fabjankaliterna@blueair.com</a></p>
+      </div>
+
+    </div>
+
+    <div class="footer-right">
+
+      <p class="footer-company-about">
+        <span>O agenciji</span>
+        Blue Airways je putnička agencija s višegodišnjim iskustvom u planiranju i provođenju putovanja po cijelome
+        svijetu.
+      </p>
+
+      <div class="footer-icons">
+
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:fkalit00@fesb.hr"><i class="far fa-envelope"></i></a>
+
+      </div>
+    </div>
+    <p>
+      &copy;<em>2021, Sva prava pridržana</em>
+      <br />
+      <strong>Fabjan Kaliterna</strong>
+    </p>
+  </footer>
+</body>
+
+</html>
