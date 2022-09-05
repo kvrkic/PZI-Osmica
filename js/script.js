@@ -209,7 +209,7 @@ function openPage(pageName, elmnt, color) {
 document.getElementById("defaultOpen").click();
 
 //TIMER
-var countDownDate = new Date("Sep 20, 2021 12:00:00").getTime();
+var countDownDate = new Date("Sep 05, 2022 12:00:00").getTime();
 
 var x = setInterval(function () {
 
