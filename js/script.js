@@ -1,10 +1,13 @@
-//CART
 document.getElementById("shopping").addEventListener("click", () => {
   document.getElementById("shopping-side-menu").classList.toggle("active");
 });
-
 let counter = 0;
 document.getElementById("shopping-count").innerText = counter;
+
+document.getElementById("hamburger-menu").addEventListener("click", () => {
+  document.getElementById("sidebar-menu").classList.toggle("active");
+});
+
 
 function calculateCount() {
   let totalCount = 0;
@@ -17,7 +20,7 @@ function calculateCount() {
   document.getElementById("shopping-count").innerText = totalCount;
 }
 
-const buttons = document.querySelectorAll("#karte button.blue");
+const buttons = document.querySelectorAll("#artikli button.green");
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", onOrderButtonClick);
 }
@@ -26,19 +29,19 @@ function onOrderButtonClick(event) {
   const clickedButtonElement = event.currentTarget;
   const articleElement = clickedButtonElement.parentElement;
 
-  const karteName = articleElement.querySelector("h3").innerText;
-  const kartePrice = articleElement.querySelector("small em").innerText;
+  const artikliName = articleElement.querySelector("h3").innerText;
+  const artikliPrice = articleElement.querySelector("em").innerText;
 
-  const karteInShop = document.getElementById(karteName.toLowerCase());
-  if (karteInShop) {
+  const artikliInShop = document.getElementById(artikliName.toLowerCase());
+  if (artikliInShop) {
 
-    const amountElement = karteInShop.querySelector(".amount");
+    const amountElement = artikliInShop.querySelector(".amount");
     let amountNumber = parseInt(amountElement.textContent);
     amountElement.innerText = ++amountNumber;
   }
   else {
 
-    createShopItem(karteName, kartePrice);
+    createShopItem(artikliName, artikliPrice);
   };
 
   calculateCount();
@@ -70,7 +73,7 @@ function createShopItem(name, price) {
 
   document.getElementById("shopping-items").append(shopItem);
 
-  shopItem.querySelector(".close").addEventListener("click", delate);
+  shopItem.querySelector(".close").addEventListener("click", izbrisi);
 
 
   shopItem.querySelector(".plus").addEventListener("click", plus);
@@ -86,14 +89,13 @@ function calculateTotalPrice() {
   for (let i = 0; i < itemsInShop.length; i++) {
     const item = itemsInShop[i];
 
-
     const amount = item.querySelector(".amount").textContent;
     const price = item.querySelector(".price").textContent;
     const onlyPrice = price.split(" ")[0];
 
-    const umnozak = parseInt(amount) * parseFloat(onlyPrice);
+    const suma = parseInt(amount) * parseFloat(onlyPrice);
 
-    totalPrice += umnozak;
+    totalPrice += suma;
   }
   document.querySelector("#total-price strong").innerText = totalPrice.toFixed(2) + " kn";
 
@@ -113,7 +115,7 @@ function calculateTotalPrice() {
 
 }
 
-function delate(event) {
+function izbrisi(event) {
   const clickedX = event.currentTarget;
   const item = clickedX.parentElement;
   item.remove();
@@ -128,7 +130,7 @@ function plus(event) {
 
   if (clickedPlus) {
     let value = amountBox.querySelector(".amount").innerText;
-    ++value;
+    value++;
     amountBox.querySelector(".amount").innerText = value;
   }
 
@@ -149,37 +151,11 @@ function minus(event) {
   calculateCount();
 }
 
-//GALERIJA
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex - 1].alt;
-}
-
-window.onscroll = function () { myFunction() };
+//scroll progress
+window.onscroll = function() {
+  myFunction();
+  scrollFunction();
+};
 
 function myFunction() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -188,43 +164,17 @@ function myFunction() {
   document.getElementById("myBar").style.width = scrolled + "%";
 }
 
-document.querySelector("#main > div > div > div > div.home-page-destination-price-new.teaser-layouts.section > section")
+//na vrh
+var mybutton = document.getElementById("navrh");
 
-function openPage(pageName, elmnt, color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+function scrollFunction (){
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
   }
-
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
 }
 
-document.getElementById("defaultOpen").click();
-
-//TIMER
-var countDownDate = new Date("Sep 05, 2022 12:00:00").getTime();
-
-var x = setInterval(function () {
-
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
-    + minutes + "m " + seconds + "s ";
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
-  }
-}, 1000);
+function naVrh() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
